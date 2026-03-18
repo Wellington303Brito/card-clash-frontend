@@ -1,6 +1,5 @@
 const API_URL = "https://card-clash-backend.onrender.com";
 
-// CADASTRO
 async function registerPlayer(username, email, password) {
   const res = await fetch(`${API_URL}/register`, {
     method: "POST",
@@ -13,7 +12,6 @@ async function registerPlayer(username, email, password) {
   return await res.json();
 }
 
-// LOGIN
 async function loginPlayer(email, password) {
   const res = await fetch(`${API_URL}/login`, {
     method: "POST",
@@ -26,7 +24,6 @@ async function loginPlayer(email, password) {
   return await res.json();
 }
 
-// SALVAR DECK
 async function saveDeck(player_id, name, cards) {
   const res = await fetch(`${API_URL}/decks`, {
     method: "POST",
@@ -39,7 +36,6 @@ async function saveDeck(player_id, name, cards) {
   return await res.json();
 }
 
-// LISTAR DECKS
 async function getDecks(playerId) {
   const res = await fetch(`${API_URL}/decks/${playerId}`);
   return await res.json();
