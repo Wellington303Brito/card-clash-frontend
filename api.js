@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "https://card-clash-backend.onrender.com";
 
 // CADASTRO
 async function registerPlayer(username, email, password) {
